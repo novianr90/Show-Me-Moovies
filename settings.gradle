@@ -16,3 +16,5 @@ rootProject.name = "ShowMeMoovies"
 include ':app'
 include ':common:base'
 include ':common:network'
+include ':common:data'
+include ':common:domain'

@@ -2,6 +2,7 @@ package id.novian.common.base
 
 object Constants {
     const val BASE_URL = "https://api.themoviedb.org/3/"
+    const val IMG_BASE_URL = "https://image.tmdb.org/t/p/w500/"
 
     object Urls {
         const val URL_LIST_POPULAR_MOVIES = "movie/popular"
@@ -16,7 +17,6 @@ object Constants {
         const val WRITE = 30L
     }
 
-    // Header Start Region
     object Header {
         const val ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9." +
                 "eyJhdWQiOiI3NDE2M2UzZmQ5N2IzODcxOGFhMDA5OTljYjgxZjcyMyIsInN1YiI6IjYyNTRlMmNmMzczYWMyMDA5ZDBhMGRjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ." +
@@ -26,5 +26,4 @@ object Constants {
         const val ACCEPT_HEADER = "accept"
         const val JSON_ACCEPT = "application/json"
     }
-    // End Region
 }

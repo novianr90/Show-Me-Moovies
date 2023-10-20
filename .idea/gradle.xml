@@ -16,6 +16,8 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/common/base" />
+            <option value="$PROJECT_DIR$/common/data" />
+            <option value="$PROJECT_DIR$/common/domain" />
             <option value="$PROJECT_DIR$/common/network" />
           </set>
         </option>
