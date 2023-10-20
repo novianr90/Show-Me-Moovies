@@ -1,16 +1,16 @@
-package id.novian.common.domain.model
+package id.novian.common.data.local.model
 
-data class MovieDetails(
-    val id: Int,
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class MovieEntity(
+    @PrimaryKey(autoGenerate = false) val id: Int,
     val originalTitle: String,
     val overview: String,
-    val popularity: Double,
     val posterPath: String,
     val backdropPath: String,
-    val genres: List<String>,
     val releaseDate: String,
-    val runtime: Int,
-    val revenue: Int,
     val status: String,
     val tagline: String
 )
