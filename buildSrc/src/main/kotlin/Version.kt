@@ -3,9 +3,10 @@ object Version {
 
     object Core {
         const val ktxVersion = "1.10.1"
-        const val kotlinGradlePlugin = "1.8.20"
-        const val gradleVersion = "8.0.2"
-        const val javaPoetVersion = "1.13.0"
+    }
+
+    object NavigationComponent {
+        const val version = "2.5.3"
     }
 
     object Layout {
@@ -39,6 +40,10 @@ object Version {
 
     object Coroutines {
         const val version = "1.3.9"
+    }
+
+    object Room {
+        const val version = "2.5.2"
     }
 
     object UnitTest {

@@ -3,10 +3,11 @@ object Dependency {
 
     object Core {
         const val coreKtx = "androidx.core:core-ktx:${Version.Core.ktxVersion}"
+    }
 
-        const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.Core.kotlinGradlePlugin}"
-        const val gradleProject = "com.android.tools.build:gradle:${Version.Core.gradleVersion}"
-        const val javaPoet = "com.squareup:javapoet:${Version.Core.javaPoetVersion}"
+    object NavigationComponent {
+        const val navCompKtx = "androidx.navigation:navigation-ui-ktx:${Version.NavigationComponent.version}"
+        const val navCompPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Version.NavigationComponent.version}"
     }
 
     object Layout {
@@ -48,6 +49,12 @@ object Dependency {
 
     object Coroutines {
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.Coroutines.version}"
+    }
+
+    object Room {
+        const val roomRuntime = "androidx.room:room-runtime:${Version.Room.version}"
+        const val roomKtx = "androidx.room:room-ktx:${Version.Room.version}"
+        const val roomCompiler = "androidx.room:room-compiler:${Version.Room.version}"
     }
 
     object UnitTest {

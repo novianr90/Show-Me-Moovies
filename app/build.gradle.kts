@@ -1,8 +1,14 @@
+import DependenciesImplementation.core
+import DependenciesImplementation.hilt
+import DependenciesImplementation.layout
+import DependenciesImplementation.navComp
+
 plugins {
-    id(Plugin.android)
-    id(Plugin.kotlinAndroid)
-    kotlin(Plugin.kapt)
-    id(Plugin.hilt)
+    id(ProjectPlugin.androidLibrary)
+    id(ProjectPlugin.kotlinAndroid)
+    kotlin(ProjectPlugin.kapt)
+    id(ProjectPlugin.hilt)
+    id(ProjectPlugin.navComp)
 }
 
 kotlin {
@@ -51,10 +57,9 @@ kapt {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation(Dependency.Core.coreKtx)
-    implementation(Dependency.Layout.appCompat)
-    implementation(Dependency.Layout.androidMaterial)
+    core()
+    hilt()
+    layout()
+    navComp()
 
-    implementation(Dependency.Hilt.hilt)
-    kapt(Dependency.Hilt.compiler)
 }

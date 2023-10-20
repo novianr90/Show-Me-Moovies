@@ -6,7 +6,8 @@ buildscript {
     }
 
     dependencies {
-        classpath(Dependency.Core.kotlinGradlePlugin)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.20")
         classpath(Dependency.Hilt.plugin)
+        classpath(Dependency.NavigationComponent.navCompPlugin)
     }
 }
