@@ -14,10 +14,6 @@ object DependenciesImplementation {
         implementation(Dependency.Layout.shimmer)
     }
 
-    fun DependencyHandler.navComp() {
-        implementation(Dependency.NavigationComponent.navCompKtx)
-    }
-
     fun DependencyHandler.hilt() {
         implementation(Dependency.Hilt.hilt)
         kapt(Dependency.Hilt.compiler)

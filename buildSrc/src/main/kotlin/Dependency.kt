@@ -7,6 +7,9 @@ object Dependency {
 
     object NavigationComponent {
         const val navCompKtx = "androidx.navigation:navigation-ui-ktx:${Version.NavigationComponent.version}"
+        const val navCompFragment = "androidx.navigation:navigation-fragment-ktx:${Version.NavigationComponent.version}"
+        const val navCompDynamicFeatures = "androidx.navigation:navigation-dynamic-features-fragment:${Version.NavigationComponent.version}"
+
         const val navCompPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Version.NavigationComponent.version}"
     }
 
