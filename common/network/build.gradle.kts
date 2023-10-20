@@ -1,6 +1,6 @@
-import DependenciesImplementation.core
 import DependenciesImplementation.hilt
-import DependenciesImplementation.layout
+import DependenciesImplementation.okhttp
+import DependenciesImplementation.retrofit
 
 plugins {
     id(ProjectPlugin.androidLib)
@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "id.novian.common.base"
+    namespace = "id.novian.common.network"
     compileSdk = AppConfig.compileSdk
 
     defaultConfig {
@@ -37,13 +37,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    core()
-    layout()
+    retrofit()
+    okhttp()
     hilt()
+
+    implementation(project(":common:base"))
 }
