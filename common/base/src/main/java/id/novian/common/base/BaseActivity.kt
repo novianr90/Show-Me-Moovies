@@ -2,12 +2,12 @@ package id.novian.common.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.fragment.app.FragmentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseActivity<VB : ViewBinding> : FragmentActivity() {
+abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
-    private lateinit var binding: VB
+    lateinit var binding: VB
     abstract val bindingInflater: (LayoutInflater) -> VB
 
     override fun onCreate(savedInstanceState: Bundle?) {

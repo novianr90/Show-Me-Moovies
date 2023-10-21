@@ -1,4 +1,6 @@
+import DependenciesImplementation.core
 import DependenciesImplementation.hilt
+import DependenciesImplementation.retrofit
 import DependenciesImplementation.room
 
 plugins {
@@ -39,10 +41,15 @@ android {
 }
 
 dependencies {
+    core()
 
+    implementation(project(":common:base"))
     implementation(project(":common:network"))
     implementation(project(":common:domain"))
 
     room()
     hilt()
+    retrofit()
+
+    implementation(Dependency.Paging.core)
 }

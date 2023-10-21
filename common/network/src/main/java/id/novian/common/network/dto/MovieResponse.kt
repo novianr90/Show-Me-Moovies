@@ -1,8 +1,10 @@
 package id.novian.common.network.dto
 
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+@Keep
 data class MovieResponse(
     @SerializedName("page")
     val page: Int,

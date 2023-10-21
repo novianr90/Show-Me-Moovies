@@ -1,5 +1,6 @@
 package id.novian.common.network.interceptor
 
+import android.util.Log
 import id.novian.common.base.Constants
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -14,6 +15,8 @@ class HeaderInterceptor : Interceptor {
             )
             .addHeader(Constants.Header.ACCEPT_HEADER, Constants.Header.JSON_ACCEPT)
             .build()
+
+        Log.i("intercep", "invoked with ${newRequest.method}")
 
         return chain.proceed(newRequest)
     }

@@ -42,4 +42,6 @@ dependencies {
 
     coroutines()
     hilt()
+
+    implementation(Dependency.Paging.core)
 }

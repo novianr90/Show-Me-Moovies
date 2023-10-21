@@ -7,9 +7,12 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import id.novian.common.data.MoviePopularPagingDataSourceImpl
 import id.novian.common.data.MovieRepositoryImpl
 import id.novian.common.data.local.LocalDatabase
+import id.novian.common.data.local.MovieDao
 import id.novian.common.domain.MovieRepository
+import id.novian.common.network.paging.MoviePopularPagingDataSource
 import id.novian.common.network.service.MovieService
 
 @Module
@@ -28,10 +31,21 @@ object DataModule {
     }
 
     @Provides
+    fun provideMovieDao(localDatabase: LocalDatabase): MovieDao {
+        return localDatabase.dao
+    }
+
+    @Provides
     fun provideMovieRepository(
-        localDatabase: LocalDatabase,
-        movieService: MovieService
+        dao: MovieDao,
+        movieService: MovieService,
+        pagingDataSource: MoviePopularPagingDataSource
     ): MovieRepository {
-        return MovieRepositoryImpl(localDatabase.dao, movieService)
+        return MovieRepositoryImpl(dao, movieService, pagingDataSource)
+    }
+
+    @Provides
+    fun provideMoviePopularPagingDataSource(movieService: MovieService): MoviePopularPagingDataSource {
+        return MoviePopularPagingDataSourceImpl(movieService)
     }
 }

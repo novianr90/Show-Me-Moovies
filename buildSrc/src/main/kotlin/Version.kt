@@ -19,7 +19,8 @@ object Version {
     }
 
     object Hilt {
-        const val version = "2.44"
+        const val version = "2.48"
+        const val vmVersion = "1.0.0-alpha03"
     }
 
     object Retrofit {
@@ -53,6 +54,18 @@ object Version {
     object AndroidTest {
         const val jUnitVersion = "1.1.5"
         const val espressoVersion = "3.5.1"
+    }
+
+    object MaterialSearchBar {
+        const val version = "0.8.5"
+    }
+
+    object RoundedImageView {
+        const val version = "2.3.0"
+    }
+
+    object Paging {
+        const val version = "3.0.0"
     }
 
 }

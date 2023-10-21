@@ -1,8 +1,10 @@
 package id.novian.common.network.dto.single
 
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+@Keep
 data class SingleMovieResponse(
     @SerializedName("adult")
     val adult: Boolean,

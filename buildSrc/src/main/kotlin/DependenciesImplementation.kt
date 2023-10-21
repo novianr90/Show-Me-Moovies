@@ -12,11 +12,13 @@ object DependenciesImplementation {
         implementation(Dependency.Layout.androidMaterial)
         implementation(Dependency.Layout.skeletonLayout)
         implementation(Dependency.Layout.shimmer)
+        implementation(Dependency.RoundedImageView.core)
     }
 
     fun DependencyHandler.hilt() {
         implementation(Dependency.Hilt.hilt)
         kapt(Dependency.Hilt.compiler)
+        kapt(Dependency.Hilt.hiltViewModelCompiler)
     }
 
     fun DependencyHandler.retrofit() {
@@ -57,5 +59,10 @@ object DependenciesImplementation {
     fun DependencyHandler.androidTestImplementation() {
         androidTest(Dependency.AndroidTest.junit)
         androidTest(Dependency.AndroidTest.espresso)
+    }
+
+    fun DependencyHandler.navComp() {
+        implementation(Dependency.NavigationComponent.navCompKtx)
+        implementation(Dependency.NavigationComponent.navCompFragment)
     }
 }

@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
-open class BaseFragment<VB : ViewBinding> : Fragment() {
+abstract class BaseFragment<VB : ViewBinding>(
+    private val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> VB
+) : Fragment() {
     private var _binding: VB? = null
 
     val binding: VB get() = _binding as VB
 
-    lateinit var bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> VB
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,10 +29,10 @@ open class BaseFragment<VB : ViewBinding> : Fragment() {
         _binding = null
     }
 
-    open fun setup() {}
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setup()
     }
+
+    open fun setup() {}
 }

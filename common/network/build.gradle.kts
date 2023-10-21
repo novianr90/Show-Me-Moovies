@@ -1,3 +1,4 @@
+import DependenciesImplementation.coroutines
 import DependenciesImplementation.hilt
 import DependenciesImplementation.okhttp
 import DependenciesImplementation.retrofit
@@ -43,6 +44,9 @@ dependencies {
     retrofit()
     okhttp()
     hilt()
+    coroutines()
+    implementation(Dependency.Paging.core)
 
     implementation(project(":common:base"))
+
 }

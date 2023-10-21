@@ -1,5 +1,8 @@
 package id.novian.common.domain.model
 
+import androidx.annotation.Keep
+
+@Keep
 data class MovieDetails(
     val id: Int,
     val originalTitle: String,

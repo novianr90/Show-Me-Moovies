@@ -2,6 +2,7 @@ import DependenciesImplementation.coroutines
 import DependenciesImplementation.glide
 import DependenciesImplementation.hilt
 import DependenciesImplementation.layout
+import DependenciesImplementation.navComp
 import DependenciesImplementation.viewModel
 
 plugins {
@@ -39,16 +40,22 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation(project(":common:base"))
     implementation(project(":common:domain"))
+    implementation(project(":common:resources"))
+    implementation(project(":common:data"))
 
     hilt()
     layout()
     viewModel()
     glide()
     coroutines()
+    navComp()
 }

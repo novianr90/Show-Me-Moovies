@@ -8,7 +8,6 @@ object Dependency {
     object NavigationComponent {
         const val navCompKtx = "androidx.navigation:navigation-ui-ktx:${Version.NavigationComponent.version}"
         const val navCompFragment = "androidx.navigation:navigation-fragment-ktx:${Version.NavigationComponent.version}"
-        const val navCompDynamicFeatures = "androidx.navigation:navigation-dynamic-features-fragment:${Version.NavigationComponent.version}"
 
         const val navCompPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Version.NavigationComponent.version}"
     }
@@ -25,6 +24,7 @@ object Dependency {
     object Hilt {
         const val hilt = "com.google.dagger:hilt-android:${Version.Hilt.version}"
         const val compiler = "com.google.dagger:hilt-android-compiler:${Version.Hilt.version}"
+        const val hiltViewModelCompiler = "androidx.hilt:hilt-compiler:${Version.Hilt.vmVersion}"
 
         const val plugin = "com.google.dagger:hilt-android-gradle-plugin:${Version.Hilt.version}"
     }
@@ -67,6 +67,18 @@ object Dependency {
     object AndroidTest {
         const val junit = "androidx.test.ext:junit:${Version.AndroidTest.jUnitVersion}"
         const val espresso = "androidx.test.espresso:espresso-core:${Version.AndroidTest.espressoVersion}"
+    }
+
+    object MaterialSearchBar {
+        const val core = "com.github.mancj:MaterialSearchBar:${Version.MaterialSearchBar.version}"
+    }
+
+    object RoundedImageView {
+        const val core = "com.makeramen:roundedimageview:${Version.RoundedImageView.version}"
+    }
+
+    object Paging {
+        const val core = "androidx.paging:paging-runtime:${Version.Paging.version}"
     }
 
 }

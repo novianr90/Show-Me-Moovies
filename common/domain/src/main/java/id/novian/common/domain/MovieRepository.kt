@@ -1,12 +1,13 @@
 package id.novian.common.domain
 
+import androidx.paging.PagingData
 import id.novian.common.domain.model.Movie
 import id.novian.common.domain.model.MovieDetails
 import kotlinx.coroutines.flow.Flow
 
 interface MovieRepository {
 
-    suspend fun getMoviePopular(page: Int): Flow<List<Movie>>
+    suspend fun getMoviePopular(): Flow<PagingData<Movie>>
 
     suspend fun getDiscoverMovie(): Flow<List<Movie>>
 

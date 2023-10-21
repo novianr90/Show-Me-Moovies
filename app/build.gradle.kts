@@ -1,6 +1,8 @@
 import DependenciesImplementation.core
+import DependenciesImplementation.coroutines
 import DependenciesImplementation.hilt
 import DependenciesImplementation.layout
+import DependenciesImplementation.navComp
 
 plugins {
     id(ProjectPlugin.androidApp)
@@ -57,12 +59,18 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation(project(":common:base"))
+    implementation(project(":common:resources"))
+    implementation(project(":common:data"))
+    implementation(project(":common:domain"))
+
+    implementation(project(":feature:home"))
+    implementation(project(":feature:favorites"))
+    implementation(project(":feature:details"))
 
     core()
     hilt()
     layout()
+    coroutines()
 
-    api(Dependency.NavigationComponent.navCompKtx)
-    api(Dependency.NavigationComponent.navCompFragment)
-    api(Dependency.NavigationComponent.navCompDynamicFeatures)
+    navComp()
 }
