@@ -12,5 +12,6 @@ data class MovieDetails(
     val runtime: Int,
     val revenue: Int,
     val status: String,
-    val tagline: String
+    val tagline: String,
+    val favorites: Boolean
 )

@@ -81,4 +81,14 @@ class MovieRepositoryImpl(
             }
         }
     }
+
+    override suspend fun checkFavorites(id: Int): Flow<Boolean> {
+        return flow {
+            val movie = local.getMovieById(id)
+
+            emit(movie.isNotEmpty())
+        }
+    }
+
+
 }

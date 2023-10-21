@@ -31,7 +31,8 @@ fun SingleMovieResponse.toDomain(): MovieDetails {
         runtime = this.runtime,
         revenue = this.revenue,
         status = this.status,
-        tagline = this.tagline
+        tagline = this.tagline,
+        favorites = false
     )
 }
 
